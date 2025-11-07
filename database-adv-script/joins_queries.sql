@@ -6,7 +6,8 @@ FROM Booking b
 -- LEFT JOIN: All properties and their reviews (include properties without reviews)
 SELECT p.*, r.*
 FROM Property p
-         LEFT JOIN Review r ON p.id = r.property_id;
+         LEFT JOIN Review r ON p.id = r.property_id
+ORDER BY p.property_id;
 
 -- FULL OUTER JOIN: All users and bookings (even if some do not match)
 SELECT u.*, b.*
